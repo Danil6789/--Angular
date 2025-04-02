@@ -1,0 +1,22 @@
+{
+    "University": [
+        {
+            "id": 1,
+            "name": "СГАУ",
+            "militaryDep": true,
+            "amount" : 800
+        },
+        {
+            "id": 2,
+            "name": "СГЭУ",
+            "militaryDep": false,
+            "amount" : 500
+        },
+        {
+            "id": 3,
+            "name": "САМГМУ",
+            "militaryDep": true,
+            "amount" : 400
+        }
+    ]
+}
