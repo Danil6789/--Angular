@@ -1,0 +1,21 @@
+<div>
+  <h1>Планирощик задач</h1>
+  <nav>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="link">Задачи </a>
+    <a routerLink="/cretask" routerLinkActive="active" class="link">Создать задачу</a>
+  </nav>
+  <div class="container" *ngFor="let i of data">
+    <p>Номер: {{i.number}}</p>
+    <p>Тип: {{i.type}}</p>
+    <p>Заголовок: {{i.title}}</p>
+    <p>Описание: {{i.description}}</p>
+    <p>Статус: {{i.status}}</p>
+    <p>Приоритет: {{i.priority}}</p>
+    <p>Исполнитель: {{i.actor}}</p>
+    <p>Создатель: {{i.creator}}</p>
+    <p>Дата создания: {{i.date}}</p>
+    <p>Дата изменения: {{i.datech}}</p>
+    <br>
+  </div>
+  <router-outlet></router-outlet>
+</div>

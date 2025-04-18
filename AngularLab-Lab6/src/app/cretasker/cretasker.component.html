@@ -1,0 +1,54 @@
+<form [formGroup] = "taskForm" (ngSubmit) = "onSubmit()">
+    <div>
+        <label>Тип</label>
+        <select name="tchoose" formControlName="type">
+            <option value="bug">bug</option>
+            <option value="task">task</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Приоритет</label>
+        <select name="pchoose" formControlName="priority">
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+            <option value="high">high</option>
+            <option value="critical">critical</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Статус</label>
+        <select name="schoose" formControlName="status">
+            <option value="process">in process</option>
+            <option value="done">done</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Заголовок</label>
+        <input name="title" formControlName="title"/>
+    </div>
+    <div *ngIf="taskForm.invalid && taskForm.touched">
+        Не задан заголовок
+    </div>
+
+    <div>
+        <label>Описание</label>
+        <input name="description" formControlName="description"/>
+    </div>
+    <div>
+        <label>Исполнитель</label>
+        <input name="actor" formControlName="actor"/>
+    </div>
+
+    <div>
+        <label>Создатель</label>
+        <input name="creator" formControlName="creator"/>
+    </div>
+    <div *ngIf="taskForm.invalid && taskForm.touched">
+        Не задан создатель
+    </div>
+    <button type="submit" [disabled]="taskForm.invalid">Создать</button>
+
+</form>
